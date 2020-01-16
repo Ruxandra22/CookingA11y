@@ -50,14 +50,16 @@ class Homepage extends Component {
 		let welcome_recipes = this.state.welcome_recipes;
 
 		let recipes = welcome_recipes.map((recipe, i) => (
-			<Link aria-label={`Read the details of "${recipe.title}"`} to={"/recipe_details/" + recipe.id} key={recipe.id}>
-				<RecipeCard
-					recipeID={recipe.id}
-					imageURL={recipe.image}
-					title={recipe.title}
-					cookingTime={recipe.readyInMinutes}
-				/>
-			</Link>
+			<Box as="li" key={recipe.id}>
+				<Link aria-label={`Read the details of "${recipe.title}"`} to={"/recipe_details/" + recipe.id}>
+					<RecipeCard
+						recipeID={recipe.id}
+						imageURL={recipe.image}
+						title={recipe.title}
+						cookingTime={recipe.readyInMinutes}
+					/>
+				</Link>
+			</Box>
 		));
 
 		return(
@@ -91,7 +93,7 @@ class Homepage extends Component {
 								</Box>
 							}
 							{(!this.state.isLoading) &&
-								<Grid
+								<Grid as="ul"
 									gridArea="random_recipes"
 									columns={RESPONSIVE["homepage"][size]}
 								>
