@@ -2,12 +2,13 @@ import API_KEY from "./ApiKey";
 import ObservableModel from "./ObservableModel";
 import {STARTER, FIRST_DISH, SECOND_DISH, DESSERT} from "./Constants"
 
-const BASE_URL= "http://sunset.nada.kth.se:8080/iprog/group/45";
-const httpOptions = {
-	headers: {
-		"X-Mashape-Key": API_KEY,
-	}
-};
+const BASE_URL= "https://api.spoonacular.com"
+const authentication = "apiKey=c6b45efd7c734a2fa75bc64dedff61d1";
+// const httpOptions = {
+// 	headers: {
+// 		"X-Mashape-Key": API_KEY,
+// 	}
+// };
 
 const my_recipes = JSON.parse(localStorage.getItem('my_recipes')) || [];
 
@@ -23,12 +24,12 @@ class DataModel extends ObservableModel{
 		this.customRecipes = my_recipes;
 		this.jokes = ["Diet tip: If you think you're hungry, you might just be thirsty. Have a bottle of wine first and " +
 		"then see how you feel.",
-		"What did Bacon say to Tomato? Lettuce get together!",
-		"Turning vegan is a big missed steak.",
-		"If you weigh 99 pounds and eat 1 pound of nachos you will be 1% nachos!",
-		"I eat my tacos over a Tortilla. That way when stuff falls out, BOOM, another taco.",
-		"I went to a peanut factory last week. It was nuts!",
-		"I eat my tacos over a Tortilla. That way when stuff falls out, BOOM, another taco."]
+			"What did Bacon say to Tomato? Lettuce get together!",
+			"Turning vegan is a big missed steak.",
+			"If you weigh 99 pounds and eat 1 pound of nachos you will be 1% nachos!",
+			"I eat my tacos over a Tortilla. That way when stuff falls out, BOOM, another taco.",
+			"I went to a peanut factory last week. It was nuts!",
+			"I eat my tacos over a Tortilla. That way when stuff falls out, BOOM, another taco."]
 	}
 
 	// getRandomFoodJoke() {
@@ -42,18 +43,18 @@ class DataModel extends ObservableModel{
 	}
 
 	getRandomRecipes(number_of_recipes) {
-		const url = `${BASE_URL}/recipes/random?number=` + number_of_recipes;
-		return fetch(url, httpOptions).then(this.processResponse);
+		const url = `${BASE_URL}/recipes/random?number=` + number_of_recipes + '&' + authentication;
+		return fetch(url).then(this.processResponse);
 	}
 
 	getRecipes(limit, offset, query) {
 		let url = null;
 		if (query){
-			url = `${BASE_URL}/recipes/search?query=${query}&number=${limit}&offset=${offset}`;
+			url = `${BASE_URL}/recipes/search?query=${query}&number=${limit}&offset=${offset}` + '&' + authentication;
 		} else {
-			url = `${BASE_URL}/recipes/search?number=${limit}&offset=${offset}`;
+			url = `${BASE_URL}/recipes/search?number=${limit}&offset=${offset}` + '&' + authentication;
 		}
-		return fetch(url, httpOptions).then(this.processResponse);
+		return fetch(url).then(this.processResponse);
 	}
 
 	getComplexRecipes(limit, offset, query, filters){
@@ -85,16 +86,18 @@ class DataModel extends ObservableModel{
 		if (filters.maxReadyTime){ maxReadyTime = `&maxReadyTime=${filters.maxReadyTime}`; }
 
 		if (query){
-			url = `${BASE_URL}/recipes/complexSearch?query=${query}&number=${limit}&offset=${offset}&addRecipeInformation=true${diets}${intolerances}${mealType}${maxReadyTime}`;
+			url = `${BASE_URL}/recipes/complexSearch?query=${query}&number=${limit}&offset=${offset}&addRecipeInformation=true${diets}${intolerances}${mealType}${maxReadyTime}`
+				+ '&' + authentication;
 		} else {
-			url = `${BASE_URL}/recipes/complexSearch?number=${limit}&offset=${offset}&addRecipeInformation=true${diets}${intolerances}${mealType}${maxReadyTime}`;
+			url = `${BASE_URL}/recipes/complexSearch?number=${limit}&offset=${offset}&addRecipeInformation=true${diets}${intolerances}${mealType}${maxReadyTime}`
+				+ '&' + authentication;
 		}
-		return fetch(url, httpOptions).then(this.processResponse);
+		return fetch(url).then(this.processResponse);
 	}
 
 	getRecipeByID(recipeID) {
-		const url = `${BASE_URL}/recipes/${recipeID}/information?includeNutrition=false`
-		return fetch(url, httpOptions).then(this.processResponse);
+		const url = `${BASE_URL}/recipes/${recipeID}/information?includeNutrition=false` + '&' + authentication;
+		return fetch(url).then(this.processResponse);
 	}
 
 	processResponse(response) {
@@ -144,8 +147,8 @@ class DataModel extends ObservableModel{
 			let dishID = dishesInMenuList[i].split("/")[1];
 			if(!isNaN(parseInt(dishID, 10))) {
 				result.set(dishesInMenuList[i], []);	// we set the key as the name + id for uniqueness
-				const url = `${BASE_URL}/recipes/${dishID}/similar?number=${numberOfSimilar}`;
-				const response = await fetch(url, httpOptions);
+				const url = `${BASE_URL}/recipes/${dishID}/similar?number=${numberOfSimilar}` + '&' + authentication;
+				const response = await fetch(url);
 				const similarDishes = await response.json();
 
 				for (let j = 0; j < similarDishes.length; j++) {
