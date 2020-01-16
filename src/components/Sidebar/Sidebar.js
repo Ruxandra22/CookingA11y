@@ -45,7 +45,7 @@ class Sidebar extends Component {
                     <Link to={"/recipe_details/" + starter.split("/")[1]}>
                         {starter.split("/")[0]}
                     </Link>
-                    <Button onClick={() => this.deleteRecipeFromMenu(STARTER, starter)}>
+                    <Button a11yTitle="Delete recipe" onClick={() => this.deleteRecipeFromMenu(STARTER, starter)}>
                         <FormTrash color='brand'/>
                     </Button>
                 </Text>
@@ -56,8 +56,10 @@ class Sidebar extends Component {
         let firstDishes = selectedDishMap.get(FIRST_DISH).map(firstDishesTitle => (
             <Box pad="medium" background="light-2" key={firstDishesTitle}>
                 <Text>
-                    {firstDishesTitle.split("/")[0]}
-                    <Button onClick={() => this.deleteRecipeFromMenu(FIRST_DISH, firstDishesTitle)}>
+                    <Link to={"/recipe_details/" + firstDishesTitle.split("/")[1]}>
+                        {firstDishesTitle.split("/")[0]}
+                    </Link>
+                    <Button a11yTitle="Delete recipe" onClick={() => this.deleteRecipeFromMenu(FIRST_DISH, firstDishesTitle)}>
                         <FormTrash color='brand'/>
                     </Button>
                 </Text>
@@ -67,8 +69,10 @@ class Sidebar extends Component {
         let secondDishes = selectedDishMap.get(SECOND_DISH).map(secondDishesTitle => (
             <Box pad="medium" background="light-2" key={secondDishesTitle}>
                 <Text>
-                    {secondDishesTitle.split("/")[0]}
-                    <Button onClick={() => this.deleteRecipeFromMenu(SECOND_DISH, secondDishesTitle)}>
+                    <Link to={"/recipe_details/" + secondDishesTitle.split("/")[1]}>
+                        {secondDishesTitle.split("/")[0]}
+                    </Link>
+                    <Button a11yTitle="Delete recipe" onClick={() => this.deleteRecipeFromMenu(SECOND_DISH, secondDishesTitle)}>
                         <FormTrash color='brand'/>
                     </Button>
                 </Text>
@@ -78,8 +82,10 @@ class Sidebar extends Component {
         let desserts = selectedDishMap.get(DESSERT).map(dessertTitle => (
             <Box pad="medium" background="light-2" key={dessertTitle.split("/")[1]}>
                 <Text>
-                    {dessertTitle.split("/")[0]}
-                    <Button onClick={() => this.deleteRecipeFromMenu(DESSERT, dessertTitle)}>
+                    <Link to={"/recipe_details/" + dessertTitle.split("/")[1]}>
+                        {dessertTitle.split("/")[0]}
+                    </Link>
+                    <Button a11yTitle="Delete recipe" onClick={() => this.deleteRecipeFromMenu(DESSERT, dessertTitle)}>
                         <FormTrash color='brand'/>
                     </Button>
                 </Text>
