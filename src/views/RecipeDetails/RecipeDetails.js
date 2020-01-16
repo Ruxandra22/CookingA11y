@@ -84,7 +84,7 @@ function AddToMyMenu(props) {
 						pad={{ vertical: "xsmall", horizontal: "small" }}
 						background="#2C365E"
 					>
-						<Box align="center" direction="row" gap="xsmall">
+						<Box align="center" direction="row" gap="xsmall" role="status">
 							<StatusGood color="#6fffb0"/>
 							<Text color="#6fffb0">The recipe has been added to your menu</Text>
 						</Box>

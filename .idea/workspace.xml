@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a64f032-d90d-4158-8458-d5044494be69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RecipeDetails/RecipeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RecipeDetails/RecipeDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,7 @@
       <workItem from="1578141261417" duration="22064000" />
       <workItem from="1578605194665" duration="39000" />
       <workItem from="1578641880979" duration="7053000" />
-      <workItem from="1579207304637" duration="662000" />
+      <workItem from="1579207304637" duration="770000" />
     </task>
     <task id="LOCAL-00001" summary="added the .gitignore file">
       <created>1577287941476</created>
@@ -336,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579207737303</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="created a list of items in the random recipes in Homepage">
+      <created>1579208010746</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1579208010746</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +364,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished Details View, but without the sidebar" />
     <MESSAGE value="finished the popup" />
     <MESSAGE value="added dish according to the type; still some bugs" />
     <MESSAGE value="finished the add to menu functionality" />
@@ -382,17 +388,18 @@
     <MESSAGE value="added X for the advanced search and add to menu pop ups" />
     <MESSAGE value="Merge branch 'ruxi'&#10;&#10;# Conflicts:&#10;#&#9;src/views/RecipeDetails/RecipeDetails.js" />
     <MESSAGE value=".workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value=".workspace" />
+    <MESSAGE value="created a list of items in the random recipes in Homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a list of items in the random recipes in Homepage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578161116062">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578161116062" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579207736110">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579208009976">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579207736110" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579208009976" />
     <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1578344430196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -421,10 +428,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="354" y="58" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1578654201669" />
-    <state x="233" y="63" key="Vcs.Push.Dialog.v2" timestamp="1578654224129">
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2" timestamp="1579208012610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1578654224129" />
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1579208012610" />
     <state x="303" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578591604452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
