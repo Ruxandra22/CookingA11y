@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a64f032-d90d-4158-8458-d5044494be69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+    <list default="true" id="7a64f032-d90d-4158-8458-d5044494be69" name="Default Changelist" comment="firebase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/DataModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataModel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KTH/P3/Interactive Programming/Labs/dinnerplanner-html-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,6 +97,9 @@
       <workItem from="1578641880979" duration="7053000" />
       <workItem from="1579207304637" duration="770000" />
       <workItem from="1579215580435" duration="1023000" />
+      <workItem from="1579268238693" duration="704000" />
+      <workItem from="1579270341610" duration="54000" />
+      <workItem from="1579282556332" duration="1658000" />
     </task>
     <task id="LOCAL-00001" summary="added the .gitignore file">
       <created>1577287941476</created>
@@ -368,7 +367,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished the popup" />
     <MESSAGE value="added dish according to the type; still some bugs" />
     <MESSAGE value="finished the add to menu functionality" />
     <MESSAGE value=".idea commit" />
@@ -393,21 +391,22 @@
     <MESSAGE value="Merge branch 'ruxi'&#10;&#10;# Conflicts:&#10;#&#9;src/views/RecipeDetails/RecipeDetails.js" />
     <MESSAGE value=".workspace" />
     <MESSAGE value="created a list of items in the random recipes in Homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a list of items in the random recipes in Homepage" />
+    <MESSAGE value="firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="firebase" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578161116062">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578161116062" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579208159520">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579268345207">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579208159520" />
-    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1578344430196">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579268345207" />
+    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1579270376345">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1578344430196" />
+    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579270376345" />
     <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1579215699236">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
