@@ -231,14 +231,18 @@ class AddRecipe extends Component {
                                 />
                             </Box>
                             <Heading level="3">Ingredients:</Heading>
-                            { ingredients }
+                            <Box aria-live>
+                                { ingredients }
+                            </Box>
                             <Button
                                 icon={ <Add /> }
                                 label="Add more ingredients"
                                 onClick={()=>{this.addIngredient()}}
                             />
                             <Heading level="3">Instructions:</Heading>
-                            { steps }
+                            <Box aria-live>
+                                { steps }
+                            </Box>
                             <Button
                                 icon={ <Add /> }
                                 label="Add more steps"

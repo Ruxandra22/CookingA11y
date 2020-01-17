@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import { Menu } from 'grommet';
+import { Box, Menu, Text } from 'grommet';
 
 import modelInstance from "../../data/DataModel";
+
+import "./MyRecipesMenu.css";
 
 class CustomMenu extends Component {
     constructor(props){
@@ -35,15 +37,18 @@ class CustomMenu extends Component {
             const item = {
                 label:  <Link to={"/recipe_details/" + customRecipes[index].recipe.title} key={customRecipes[index].recipe.title}>
                             {customRecipes[index].recipe.title}
-			            </Link>,
+		                </Link>,
             }
             menu_items = menu_items.concat(item);
         }
         return(
-            <Menu
-                label="My recipes"
-                items={menu_items}
-            />
+            <Box>
+                <Menu
+                    label="My recipes"
+                    items={menu_items}
+                />
+                <Text role="status" aria-live>You have {menu_items.length} recipes</Text>
+            </Box>
         );
     }
 }
