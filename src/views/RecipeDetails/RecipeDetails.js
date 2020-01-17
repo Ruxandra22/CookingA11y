@@ -46,6 +46,7 @@ function AddToMyMenu(props) {
 					<Paragraph alignSelf={"center"} margin="small" >Please choose the dish type!</Paragraph>
 					<Paragraph alignSelf={"center"} margin="small" >The recipe will be added to the menu on the right.</Paragraph>
 					<RadioButtonGroup
+						role="radiogroup"
 						alignSelf={"center"}
 						name="dishType"
 						options={[STARTER, FIRST_DISH, SECOND_DISH, DESSERT]}
@@ -86,7 +87,7 @@ function AddToMyMenu(props) {
 					>
 						<Box align="center" direction="row" gap="xsmall" role="status">
 							<StatusGood color="#6fffb0"/>
-							<Text role="status" color="#6fffb0">The recipe has been added to your menu</Text>
+							<Text color="#6fffb0">The recipe has been added to your menu</Text>
 						</Box>
 						<Button icon={<FormClose />} onClick={() => setOpen(undefined)} plain />
 					</Box>
