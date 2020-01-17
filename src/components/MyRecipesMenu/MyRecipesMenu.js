@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import { Box, Menu, Text } from 'grommet';
+import { Box, Menu, Stack, Text } from 'grommet';
+import { Notification } from 'grommet-icons';
 
 import modelInstance from "../../data/DataModel";
 
@@ -37,18 +38,24 @@ class CustomMenu extends Component {
             const item = {
                 label:  <Link to={"/recipe_details/" + customRecipes[index].recipe.title} key={customRecipes[index].recipe.title}>
                             {customRecipes[index].recipe.title}
-		                </Link>,
+                </Link>,
             }
             menu_items = menu_items.concat(item);
         }
         return(
-            <Box>
-                <Menu
-                    label="My recipes"
-                    items={menu_items}
-                />
-                <Text role="status" aria-live>You have {menu_items.length} recipes</Text>
-            </Box>
+            <Menu
+                label={<Stack anchor="top-right">
+                            <Notification size="large" />
+                            <Box
+                                background="brand"
+                                pad={{ horizontal: 'xsmall' }}
+                                round
+                            >
+                                <Text role="status" aria-live aria-label={`You have ${menu_items.length} recipes`}>{menu_items.length}</Text>
+                            </Box>
+                        </Stack>}
+                items={menu_items}
+            />
         );
     }
 }
