@@ -22,14 +22,6 @@ class Homepage extends Component {
 
 	componentDidMount() {
 
-		// modelInstance.getRandomFoodJoke()
-		// 	.then(joke => {
-		// 		this.setState({
-		// 			joke: joke.text
-		// 		})
-		// 	}).catch(error => {
-		// 	console.error(error);
-		// });
 		this.setState({
 			joke: modelInstance.getRandomFoodJoke()
 		})

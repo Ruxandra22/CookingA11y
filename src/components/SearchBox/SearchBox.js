@@ -38,7 +38,9 @@ function AdvancedSearch(props){
                             onClick={()=>{setShow(false)}}
                         />
                         <Heading level="1">Advanced Search</Heading>
-                        <Form onSubmit={(e) => {
+                        <Form
+                            role="search"
+                            onSubmit={(e) => {
                                 props.advancedSearch(e);
                                 setShow(false);
                             }}
@@ -131,7 +133,10 @@ const SearchBox = (props) => (
         align="center"
     >
         <Box>
-            <Form onSubmit={props.search}>
+            <Form
+                role="search"
+                onSubmit={props.search}
+            >
                 <Box direction="row-responsive">
                     <FormFieldLabel
                         name="query"

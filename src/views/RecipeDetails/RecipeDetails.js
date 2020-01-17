@@ -86,7 +86,7 @@ function AddToMyMenu(props) {
 					>
 						<Box align="center" direction="row" gap="xsmall" role="status">
 							<StatusGood color="#6fffb0"/>
-							<Text color="#6fffb0">The recipe has been added to your menu</Text>
+							<Text role="status" color="#6fffb0">The recipe has been added to your menu</Text>
 						</Box>
 						<Button icon={<FormClose />} onClick={() => setOpen(undefined)} plain />
 					</Box>
