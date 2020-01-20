@@ -105,22 +105,22 @@ class Sidebar extends Component {
                 </Heading>
                 <Accordion >
                     <AccordionPanel label= {STARTER} aria-controls="Starter">
-                        <Box id="Starter">
+                        <Box id="Starter" role="tabpanel">
                             {starters}
                         </Box>
                     </AccordionPanel>
                     <AccordionPanel label={FIRST_DISH} aria-controls="First_dish">
-                        <Box id="First_dish">
+                        <Box id="First_dish" role="tabpanel">
                             {firstDishes}
                         </Box>
                     </AccordionPanel>
                     <AccordionPanel label={SECOND_DISH} aria-controls="Second_dish">
-                        <Box id="Second_dish">
+                        <Box id="Second_dish" role="tabpanel">
                             {secondDishes}
                         </Box>
                     </AccordionPanel>
                     <AccordionPanel label={DESSERT} aria-controls="Dessert">
-                        <Box id="Dessert">
+                        <Box id="Dessert" role="tabpanel">
                             {desserts}
                         </Box>
                     </AccordionPanel>
