@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a64f032-d90d-4158-8458-d5044494be69" name="Default Changelist" comment="">
+    <list default="true" id="7a64f032-d90d-4158-8458-d5044494be69" name="Default Changelist" comment="created a list of items in the random recipes in Homepage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KTH/P3/Interactive Programming/Labs/dinnerplanner-html-react" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,9 +98,7 @@
       <workItem from="1578641880979" duration="7053000" />
       <workItem from="1579207304637" duration="770000" />
       <workItem from="1579215580435" duration="1023000" />
-      <workItem from="1579268238693" duration="704000" />
-      <workItem from="1579270341610" duration="54000" />
-      <workItem from="1579282556332" duration="2296000" />
+      <workItem from="1579528049380" duration="4509000" />
     </task>
     <task id="LOCAL-00001" summary="added the .gitignore file">
       <created>1577287941476</created>
@@ -346,14 +345,7 @@
       <option name="project" value="LOCAL" />
       <updated>1579208010746</updated>
     </task>
-    <task id="LOCAL-00036" summary="workspace.xml">
-      <created>1579284955257</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1579284955257</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +366,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="finished the popup" />
+    <MESSAGE value="added dish according to the type; still some bugs" />
     <MESSAGE value="finished the add to menu functionality" />
     <MESSAGE value=".idea commit" />
     <MESSAGE value="fixed typos" />
@@ -397,23 +391,21 @@
     <MESSAGE value="Merge branch 'ruxi'&#10;&#10;# Conflicts:&#10;#&#9;src/views/RecipeDetails/RecipeDetails.js" />
     <MESSAGE value=".workspace" />
     <MESSAGE value="created a list of items in the random recipes in Homepage" />
-    <MESSAGE value="firebase" />
-    <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a list of items in the random recipes in Homepage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578161116062">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578161116062" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579284953129">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1579531951004">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579284953129" />
-    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1579270376345">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1579531951004" />
+    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1578344430196">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579270376345" />
+    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1578344430196" />
     <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1579215699236">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -450,9 +442,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1578142468856" />
-    <state x="336" y="72" width="612" height="536" key="find.popup" timestamp="1578654524156">
+    <state x="336" y="72" width="612" height="536" key="find.popup" timestamp="1579537094756">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="336" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1578654524156" />
+    <state x="336" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1579537094756" />
   </component>
 </project>

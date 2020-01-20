@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import { Menu } from 'grommet';
+import { Box, Menu, Stack, Text } from 'grommet';
+import { Notification } from 'grommet-icons';
 
 import modelInstance from "../../data/DataModel";
+
+import "./MyRecipesMenu.css";
 
 class CustomMenu extends Component {
     constructor(props){
@@ -35,13 +38,22 @@ class CustomMenu extends Component {
             const item = {
                 label:  <Link to={"/recipe_details/" + customRecipes[index].recipe.title} key={customRecipes[index].recipe.title}>
                             {customRecipes[index].recipe.title}
-			            </Link>,
+                </Link>,
             }
             menu_items = menu_items.concat(item);
         }
         return(
             <Menu
-                label="My recipes"
+                label={<Stack anchor="top-right">
+                            <Notification size="large" />
+                            <Box
+                                background="brand"
+                                pad={{ horizontal: 'xsmall' }}
+                                round
+                            >
+                                <Text role="status" aria-live aria-label={`You have ${menu_items.length} recipes`}>{menu_items.length}</Text>
+                            </Box>
+                        </Stack>}
                 items={menu_items}
             />
         );
