@@ -104,17 +104,25 @@ class Sidebar extends Component {
                     My Menu
                 </Heading>
                 <Accordion >
-                    <AccordionPanel label= {STARTER}>
-                        {starters}
+                    <AccordionPanel label= {STARTER} aria-controls="Starter">
+                        <Box id="Starter">
+                            {starters}
+                        </Box>
                     </AccordionPanel>
-                    <AccordionPanel label={FIRST_DISH}>
-                        {firstDishes}
+                    <AccordionPanel label={FIRST_DISH} aria-controls="First_dish">
+                        <Box id="First_dish">
+                            {firstDishes}
+                        </Box>
                     </AccordionPanel>
-                    <AccordionPanel label={SECOND_DISH}>
-                        {secondDishes}
+                    <AccordionPanel label={SECOND_DISH} aria-controls="Second_dish">
+                        <Box id="Second_dish">
+                            {secondDishes}
+                        </Box>
                     </AccordionPanel>
-                    <AccordionPanel label={DESSERT}>
-                        {desserts}
+                    <AccordionPanel label={DESSERT} aria-controls="Dessert">
+                        <Box id="Dessert">
+                            {desserts}
+                        </Box>
                     </AccordionPanel>
                 </Accordion>
             </Box>
