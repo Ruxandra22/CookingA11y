@@ -17,6 +17,7 @@ import "./AddRecipe.css";
 let localRecipes = JSON.parse(localStorage.getItem('my_recipes')) || [];
 
 function _getUnitShort(unitLong){
+    debugger;
     const obj = UNITS.find(unit => unit.unitLong === unitLong);
     return obj.unitShort;
 }
@@ -53,6 +54,7 @@ class AddRecipe extends Component {
         const data = e.value;
 
         for (let index = 0; index < this.state.ingredientCount; index++) {
+            debugger;
             const ingredient_name = `e.target.elements.ingredient_${index+1}_name.value`;
             const ingredient_amount = `e.target.elements.ingredient_${index+1}_amount.value`;
             const ingredient_unit_long = `e.target.elements.ingredient_${index+1}_unit.value`;
@@ -123,39 +125,45 @@ class AddRecipe extends Component {
                     <Box
                         direction="row-responsive"
                     >
-                    <FormFieldLabel
-                        label="Name:"
-                        aria-label="Name"
-                        placeholder="e.g. Chocolate"
-                        name={`ingredient_${i + 1}_name`}
-                        required={true}
-                    />
-                    <FormFieldLabel
-                        type="number"
-                        label="Amount:"
-                        aria-label="Amount"
-                        name={`ingredient_${i + 1}_amount`}
-                        min="0"
-                        placeholder="e.g. 500"
-                        required={true}
-                    />
-                    <FormFieldLabel
-                        label="Unit:"
-                        aria-label="Unit"
-                        name={`ingredient_${i + 1}_unit`}
-                        component={ Select }
-                        placeholder="Select from the list"
-                        options={[
-                            "Mililiter(s)",
-                            "Liter(s)",
-                            "Gram(s)",
-                            "Kilogram(s)",
-                            "Teaspoon(s)",
-                            "Tablespoon(s)",
-                            "Cup(s)",
-                        ]}
-                        required={true}
-                    />
+                        <FormFieldLabel
+                            label="Name:"
+                            aria-label="Name"
+                            placeholder="e.g. Chocolate"
+                            name={`ingredient_${i + 1}_name`}
+                            htmlFor={`id_ingredient_${i + 1}_name`}
+                            id={`id_ingredient_${i + 1}_name`}
+                            required={true}
+                        />
+                        <FormFieldLabel
+                            type="number"
+                            label="Amount:"
+                            aria-label="Amount"
+                            name={`ingredient_${i + 1}_amount`}
+                            htmlFor={`id_ingredient_${i + 1}_amount`}
+                            id={`id_ingredient_${i + 1}_amount`}
+                            min="0"
+                            placeholder="e.g. 500"
+                            required={true}
+                        />
+                        <FormFieldLabel
+                            label="Unit:"
+                            aria-label="Unit"
+                            name={`ingredient_${i + 1}_unit`}
+                            htmlFor={`id_ingredient_${i + 1}_unit`}
+                            id={`id_ingredient_${i + 1}_unit`}
+                            component={ Select }
+                            placeholder="Select from the list"
+                            options={[
+                                "Mililiter(s)",
+                                "Liter(s)",
+                                "Gram(s)",
+                                "Kilogram(s)",
+                                "Teaspoon(s)",
+                                "Tablespoon(s)",
+                                "Cup(s)",
+                            ]}
+                            required={true}
+                        />
                     </Box>
                 </Box>
             );
@@ -169,6 +177,8 @@ class AddRecipe extends Component {
                         label={`Step ${i + 1}:`}
                         aria-label={`Step ${i + 1}:`}
                         name={`step_${i + 1}_description`}
+                        htmlFor={`id_step_${i + 1}_description`}
+                        id={`id_step_${i + 1}_description`}
                         placeholder="e.g. Carefully cut the tomatoes into square pieces"
                         required={true}
                     />
@@ -219,6 +229,8 @@ class AddRecipe extends Component {
                                     aria-label="Recipe name"
                                     name="title"
                                     placeholder="e.g. Tomato Twister"
+                                    htmlFor="id_recipeName"
+                                    id="id_recipeName"
                                     required={true}
                                 />
                                 <FormFieldLabel
@@ -226,6 +238,8 @@ class AddRecipe extends Component {
                                     label="Recipe description:"
                                     aria-label="Recipe description"
                                     name="instructions"
+                                    htmlFor="id_recipeInstructions"
+                                    id="id_recipeInstructions"
                                     placeholder="e.g. A vegan dish that is based on tomato with a layer of chocolate on top."
                                     required={true}
                                 />
